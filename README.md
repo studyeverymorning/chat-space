@@ -25,7 +25,7 @@
 ## Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|text|null: false, index: true|
 |Email|text|null: false, unique: true|
 |password|text|null: false|
 
