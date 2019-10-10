@@ -25,7 +25,7 @@
 ## Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, index: true|
+|name|string|null: false, index: true|
 |Email|text|null: false, unique: true|
 |password|text|null: false|
 
@@ -37,7 +37,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 
 ## Association
 - has_many :messages
