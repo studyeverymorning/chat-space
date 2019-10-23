@@ -90,11 +90,11 @@
 
 
     %div.form
-      %form.new_message{:enctype => "multipart/form-data", :action => "/groups/2406/messages", :accept-charset => "UTF-8", :method => "post"}/
-      %input{:name => "utf8", :type => "hidden", :value => "&#x2713;"}/
+      %form.new_message{enctype: "multipart/form-data", action: "/groups/2406/messages", accept: { charset: "UTF-8"}, method: "post"}/
+      %input{name: "utf8", type: "hidden", value: "&#x2713;"}/
       %div.input-box
-        %input.input-box__text{:placeholder => "type a message", :type => "text", :name => "message_content"}/
+        %input.input-box__text{placeholder: "type a message", type: "text", name: "message_content"}/
         %label.input-box__image
           %i.fa.fa-image
             %input.input-box__image__file{:type => "file", :name => "message_image"}/
-      %input.submit-btn{:type => "submit", :value => "Send"}/
+      %input.submit-btn{type: "submit", value: "Send"}/
