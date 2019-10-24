@@ -47,14 +47,16 @@ div {
   width: 100%;
   font-weight: bold;
   font-size: 16px;
-}
 
-&__box__menu {
+
+&__menu {
   display: flex;
 }
 
-&__box__menu li {
+
+&__menu li {
   margin-left: 0.3rem;
+}
 }
 }
 
@@ -118,18 +120,19 @@ a {
 
 &__left-box {
   margin-top: 35px;
-}
 
-&__left-box__current-group {
+
+&__current-group {
   font-size: 20px;
   color: #333;
   margin-bottom: 15px;
 }
 
-&__left-box__member-list {
+&__member-list {
   display: flex;
   font-size: 12px;
   color: #999999;
+}
 }
 
 & a {
@@ -150,18 +153,19 @@ a {
 &__upper-info {
   display: flex;
   margin-bottom: 10px;
-}
 
-&__upper-info__talker {
+
+&__talker {
   color: #434a54;
   font-size: 16px;
   font-weight: bold;
 }
 
-&__upper-info__date {
+&__date {
   color: #999999;
   font-size: 12px;
   margin-left: 10px;
+}
 }
 
 &__text {
@@ -199,12 +203,13 @@ a {
   top: 10px;
   right: 10px;
   cursor: pointer;
-}
 
 
 
-&__image__file {
+
+&__file {
   display: none;
+}
 }
 }
 .submit-btn {
