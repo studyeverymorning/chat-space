@@ -1,3 +1,67 @@
-.wrapper
 
-  = render 'shared/side_bar'
+
+%div.notification
+  %div.notice
+  
+  %div.alert
+    
+
+
+%div.wrapper
+  = render 'devise/shared/side_bar'
+  
+  %div.chat-main
+    %div.main-header
+      %div.main-header__left-box
+        %h2.main-header__left-box__current-group
+          エキスパ
+        %ul.main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member
+            ゆこ
+          %li.main-header__left-box__member-list__member
+            おおおお
+          %li.main-header__left-box__member-list__member
+            abe
+
+      =link_to "/groups/2406/edit" do
+        %div.main-header__edit-btn
+          Edit
+
+    %div.messages
+      %div.message
+        %div.message__upper-info
+          %p.message__upper-info__talker
+            abe
+          %p.message__upper-info__date
+            2019/10/08(Tue) 19:36:11
+        %p.message__text
+          阿部
+      %div.message
+        %div.message__upper-info
+          %p.message__upper-info__talker
+            abe
+          %p.message__upper-info__date
+            2019/10/08(Tue) 19:38:18
+        %p.message__text
+          あああ
+
+      %div.message
+        %div.message__upper-info
+          %p.message__upper-info__talker
+            abe
+          %p.message__upper-info__date
+            2019/10/08(Tue) 19:38:18
+        %p.message__text
+          なに 
+
+
+    %div.form
+      %form.new_message{enctype: "multipart/form-data", action: "/groups/2406/messages", accept: { charset: "UTF-8"}, method: "post"}/
+      %input{name: "utf8", type: "hidden", value: "&#x2713;"}/
+      %div.input-box
+        %input.input-box__text{placeholder: "type a message", type: "text", name: "message_content"}/
+        %label.input-box__image
+          %i.fa.fa-image
+            %input.input-box__image__file{:type => "file", :name => "message_image"}/
+      %input.submit-btn{type: "submit", value: "Send"}/
