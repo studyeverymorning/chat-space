@@ -1,9 +1,31 @@
-
-@import "reset";
+@import "./reset";
 @import "font-awesome";
-@import "index";
-@import "modules/user";
-@import "config/colors";
+@import "user";
+@import "./_side";
+@import "main";
+@import "variable";
 @import "modules/flash";
-@import "modules/group";
-@import "modules/side_bar";
+@import "groups/group";
+
+// .news {
+// 	background-color: #38AEF0;
+// 	color: #ffffff;
+// 	text-align: center;
+// }
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+
+:root {
+  --main-gutter: 20px;
+  --top-padding: padding-top: 35px;
+}
+
+
+.chat {
+	display: flex;
+	height: 100vh;
+}

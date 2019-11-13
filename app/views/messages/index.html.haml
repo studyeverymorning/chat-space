@@ -1,103 +1,11 @@
-%div.notification
-  %div.notice
-  
-  %div.alert
-    
-
-
-%div.wrapper
-  %div.chat-side
-    %div.side-header
-      %div.side-header__box
-        %p.side-header__box__user-name
-          = current_user.name
-        %ul.side-header__box__menu
-          %li.side-header__box__menu__new-group
-          =link_to "/groups/new" do
-            %i.fa.fa-edit
-          %li.side-header__box__menu__edit-user
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog', class: 'icon'
-
-    %div.groups
-      =link_to "/groups/2153/messages" do
-        %div.group
-          %p.group__group-name
-            sss
-          %p.group__latest-message
-            ssss
-      =link_to "/groups/2406/messages" do
-        %div.group
-          %p.group__group-name
-            エキスパ
-          %p.group__latest-message
-            あああ
-        
-      =link_to "/groups/3094/messages" do
-        %div.group
-          %p.group__group-name
-            新規グループ２
-          %p.group__latest-message
-            まだメッセージがありません
-      =link_to "/groups/3074/messages" do
-        %div.group
-          %p.group__group-name
-            新規グループ
-          %p.group__latest-message
-            まだメッセージがありません
-  
-  %div.chat-main
-    %div.main-header
-      %div.main-header__left-box
-        %h2.main-header__left-box__current-group
-          エキスパ
-        %ul.main-header__left-box__member-list
-          Member：
-          %li.main-header__left-box__member-list__member
-            ゆこ
-          %li.main-header__left-box__member-list__member
-            おおおお
-          %li.main-header__left-box__member-list__member
-            abe
-
-      =link_to "/groups/2406/edit" do
-        %div.main-header__edit-btn
-          Edit
-
-    %div.messages
-      %div.message
-        %div.message__upper-info
-          %p.message__upper-info__talker
-            abe
-          %p.message__upper-info__date
-            2019/10/08(Tue) 19:36:11
-        %p.message__text
-          阿部
-      %div.message
-        %div.message__upper-info
-          %p.message__upper-info__talker
-            abe
-          %p.message__upper-info__date
-            2019/10/08(Tue) 19:38:18
-        %p.message__text
-          あああ
-
-      %div.message
-        %div.message__upper-info
-          %p.message__upper-info__talker
-            abe
-          %p.message__upper-info__date
-            2019/10/08(Tue) 19:38:18
-        %p.message__text
-          なに 
-
-
-    %div.form
-      %form.new_message{enctype: "multipart/form-data", action: "/groups/2406/messages", accept: { charset: "UTF-8"}, method: "post"}/
-      %input{name: "utf8", type: "hidden", value: "&#x2713;"}/
-      %div.input-box
-        %input.input-box__text{placeholder: "type a message", type: "text", name: "message_content"}/
-        %label.input-box__image
-          %i.fa.fa-image
-            %input.input-box__image__file{:type => "file", :name => "message_image"}/
-      %input.submit-btn{type: "submit", value: "Send"}/
+.chat
+  .chat__side
+    = render partial: "chat_side_top"
+    = render partial: "chat_side_glist"
+  .chat__main
+    .chat__main__border
+    = render partial: "chat_main_header"
+    .main__message
+      - @messages.each do |m|
+        = render partial: "chat_main_message", locals: {message: m}
+      = render partial: "chat_main_footer"
