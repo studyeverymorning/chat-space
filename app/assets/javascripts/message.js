@@ -38,8 +38,8 @@ $(function() {
       processData: false,
       contentType: false
     })
-	  .done(function(data){
-		  var html = buildHTML(data);
+    .done(function(data){
+      var html = buildHTML(data);
       $('.main__message').append(html);
       $("#new_message")[0].reset();
       ScrollToNewMessage();
