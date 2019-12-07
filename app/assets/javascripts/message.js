@@ -43,7 +43,6 @@ $(function() {
       $('.main__message').append(html);
       $("#new_message")[0].reset();
       ScrollToNewMessage();
-	  	$('.main__footer__text').val('');
 	  	$(".main__footer__send-button").prop('disabled', false);
 	  })
 	  .fail(function(){
