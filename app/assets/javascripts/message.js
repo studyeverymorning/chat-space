@@ -53,7 +53,7 @@ $(function() {
     
     $.ajax({
       url: location.href.json,
-      data: { last_id: last_message_id },
+      // data: { last_id: last_message_id },
       type: "GET",
       dataType: 'json'
     })
