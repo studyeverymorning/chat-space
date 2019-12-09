@@ -65,7 +65,7 @@ $(function() {
         
         var insertHTML = '';
         messages.forEach(function(message){
-          insertHTML ＋= buildHTML(message);         
+          insertHTML += buildHTML(message);         
         })
         $('.main__message').append(insertHTML);
         $('.main__message').animate({scrollTop: $('.main__message')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
