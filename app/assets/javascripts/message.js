@@ -45,7 +45,7 @@ $(function() {
 	  	$(".main__footer__send-button").prop('disabled', false);
 	  })
 	  .fail(function(){
-	    alert('error1');
+	    alert('メッセージの送信に失敗しました。');
     });
   });
   
@@ -71,7 +71,7 @@ $(function() {
         $('.main__message').animate({scrollTop: $('.main__message')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
       })
       .fail(function(data){
-        alert('error2');
+        alert('自動更新に失敗しました。');
       });
     
   }
