@@ -41,7 +41,7 @@ $(function() {
 		  var html = buildHTML(data);
 	  	$('.main__message').append(html);
       $('.main__message').animate({scrollTop: $('.main__message')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
-	  	$('.main__footer__text').val('');
+	  	$("#new_message")[0].reset();
 	  	$(".main__footer__send-button").prop('disabled', false);
 	  })
 	  .fail(function(){
