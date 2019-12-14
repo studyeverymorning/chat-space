@@ -52,7 +52,8 @@ $(function() {
 
   var reloadMessages = function () {
     
-    if (window.location.href.match(/\/groups\/\d+\/messages/))
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      console.log("hello");
       var last_message_id = $('.main__message__box:last').data('message-id');
       
       $.ajax({
@@ -73,8 +74,7 @@ $(function() {
       .fail(function(data){
         alert('自動更新に失敗しました。');
       });
-    
+    }  
   }
-  setInterval(reloadMessages, 5000);//5000ミリ秒ごとにreloadMessagesという関数を実行し自動更新を行う。
- 
+  setInterval(reloadMessages, 5000);//5000ミリ秒ごとにreloadMessagesという関数を実行し自動更新を行う。 
 });
